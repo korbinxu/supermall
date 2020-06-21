@@ -1,13 +1,22 @@
 <template>
-  <div id="app"></div>
+  <div id="app">
+    <keep-alive exclude="Detail">
+      <router-view></router-view>
+    </keep-alive>
+    <MainTabBar></MainTabBar>
+  </div>
 </template>
 
 <script>
+import MainTabBar from "components/content/main_tab_bar/MainTabBar";
 export default {
   name: "App",
-  components: {}
+  components: {
+    MainTabBar
+  }
 };
 </script>
 
 <style>
+@import "./assets/css/base.css";
 </style>
